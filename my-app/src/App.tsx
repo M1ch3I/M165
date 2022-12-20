@@ -1,9 +1,10 @@
 import React from "react";
+import { Login } from "./pages/home";
 
 function App() {
   return (
     <>
-      Hello
+      <Login />
     </>
   );
 }
