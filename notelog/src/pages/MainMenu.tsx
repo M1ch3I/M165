@@ -1,10 +1,8 @@
-import { async } from '@firebase/util'
 import firebase from 'firebase/compat/app'
 import React, { useState, useRef } from 'react'
 import { useCollectionData } from 'react-firebase-hooks/firestore'
 import { auth, firestore } from '../firebase'
 import { Card } from 'primereact/card'
-import { Button } from 'primereact/button'
 
 interface IProps {
 	changeView: (data) => void
@@ -87,7 +85,7 @@ export const ChatMessage = (props) => {
 }
 
 export const Note = (props) => {
-	const { text, uid } = props.note
+	const { text } = props.note
 
 	return (
 		<>
@@ -118,7 +116,6 @@ export const Notes = (props: IProps) => {
 		})
 
 		setNoteValue('')
-		dummy.current.scrollIntoView({ behavior: 'smooth' })
 	}
 
 	return (<>
